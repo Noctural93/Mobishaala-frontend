@@ -1,5 +1,3 @@
-import React from 'react'
-
 const ImgCard = ({details}) => {
   return (
     <div className='gallary-items'>
