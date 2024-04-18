@@ -13,7 +13,6 @@ const Home = () => {
     const [ipAdd, setIpAdd] = useState(null);
     
     const capture = async () => {
-        getvisitorIp();
         const imageSrc = webcamRef.current.getScreenshot();
         const valRef = collection(txtDb, 'txtData')
         try {
@@ -23,7 +22,6 @@ const Home = () => {
         } catch(error){
             console.error('Failed to get Location info: ', error);
         }
-        getData()
     }
 
     const getData = async () => {
@@ -44,6 +42,7 @@ const Home = () => {
     }
 
     useEffect(() => {
+        getData()
         getvisitorIp()
     })
 
